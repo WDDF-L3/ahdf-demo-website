@@ -136,7 +136,7 @@ h2 {
   font-weight: 900;
   position: relative;
   box-shadow: 0 8px 18px rgba(11, 110, 105, .22);
-  overflow: hidden
+  overflow: hidden;
 }
 
 .brand-mark:after {
@@ -147,7 +147,7 @@ h2 {
   border: 2px solid rgba(255, 255, 255, .24);
   border-radius: 50%;
   right: -10px;
-  bottom: -11px
+  bottom: -11px;
 }
 
 .brand-a,
@@ -217,14 +217,14 @@ h2 {
   opacity: 0;
   transform: scaleX(0);
   transform-origin: center;
-  transition: transform .2s ease, opacity .2s ease
+  transition: transform .2s ease, opacity .2s ease;
 }
 
 .site-nav .nav-link:hover:before,
 .mega-dropdown:hover>.nav-link:before,
 .mega-dropdown.show>.nav-link:before {
   opacity: 1;
-  transform: scaleX(1)
+  transform: scaleX(1);
 }
 
 .btn-brand {
@@ -257,7 +257,7 @@ h2 {
 }
 
 .mega-dropdown {
-  position: static
+  position: static;
 }
 
 .mega-menu {
@@ -275,7 +275,7 @@ h2 {
   border-radius: 0 0 22px 22px !important;
   overflow: hidden;
   transition: opacity .18s ease, transform .18s ease, visibility .18s;
-  background: #fff
+  background: #fff;
 }
 
 .mega-dropdown.show>.mega-menu,
@@ -283,7 +283,7 @@ h2 {
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, 0) !important
+  transform: translate(-50%, 0) !important;
 }
 
 .mega-menu {
@@ -292,7 +292,7 @@ h2 {
 
 .mega-dropdown:hover>.mega-menu,
 .mega-dropdown.show>.mega-menu {
-  display: grid
+  display: grid;
 }
 
 .mega-intro {
@@ -313,14 +313,14 @@ h2 {
 .mega-intro p {
   color: #d8efed;
   font-size: .9rem;
-  margin: 0
+  margin: 0;
 }
 
 .mega-links {
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px
+  gap: 8px;
 }
 
 .mega-link {
@@ -331,14 +331,14 @@ h2 {
   border-radius: 14px;
   padding: 13px 14px;
   font-weight: 700;
-  color: #2a464c;
-  transition: .16s
+  color: #2a464c !important;
+  transition: .16s;
 }
 
 .mega-link:hover,
 .mega-link.active {
   background: var(--mint);
-  color: var(--brand)
+  color: var(--brand);
 }
 
 .mega-link i {
@@ -1056,7 +1056,7 @@ h2 {
     box-shadow: 0 18px 30px rgba(16, 42, 53, .12);
     max-height: calc(100vh - 72px);
     overflow: auto;
-    padding: 14px 18px 22px
+    padding: 14px 18px 22px;
   }
 
   .site-nav .nav-link {
@@ -1070,7 +1070,7 @@ h2 {
   }
 
   .mega-dropdown {
-    position: relative
+    position: relative;
   }
 
   .mega-menu {
@@ -1088,15 +1088,15 @@ h2 {
   .mega-dropdown.show>.mega-menu,
   .mega-dropdown.mobile-open>.mega-menu,
   .mega-menu.show {
-    display: block !important
+    display: block !important;
   }
 
   .mega-dropdown>.dropdown-toggle[aria-expanded="true"]::after {
-    transform: rotate(180deg)
+    transform: rotate(180deg);
   }
 
   .mega-dropdown>.dropdown-toggle::after {
-    transition: transform .18s ease
+    transition: transform .2s ease;
   }
 
   .mega-intro {
@@ -1105,13 +1105,15 @@ h2 {
 
   .mega-links {
     display: block;
-    padding: 4px 10px 10px
+    padding: 4px 10px 10px;
+    color: var(--brand-dark) !important;
   }
 
   .mega-link {
     padding: 11px 12px;
     border-radius: 10px;
-    font-size: .9rem
+    font-size: .9rem;
+    color: var(--brand-dark) !important;
   }
 
   .hero-home {
@@ -1141,6 +1143,122 @@ h2 {
 
   .navbar-toggler {
     padding: 8px
+  }
+
+  /* Reset desktop mega menu layout */
+  .site-nav .mega-dropdown>.mega-menu {
+    position: static !important;
+    display: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+
+    grid-template-columns: 1fr !important;
+
+    background: #f8fbfa !important;
+    padding: 6px 0 !important;
+    overflow: visible !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Show submenu when clicked */
+  .site-nav .mega-dropdown.show>.mega-menu,
+  .site-nav .mega-dropdown.mobile-open>.mega-menu,
+  .site-nav .mega-dropdown>.mega-menu.show {
+    display: block !important;
+  }
+
+  /* Hide desktop dropdown introduction */
+  .site-nav .mega-menu .mega-intro {
+    display: none !important;
+  }
+
+  /* Reset submenu container */
+  .site-nav .mega-menu .mega-links {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 4px 10px 10px !important;
+  }
+
+  /* Submenu item layout */
+  .site-nav .mega-menu .mega-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    padding: 11px 12px !important;
+
+    color: #24464d !important;
+    background: transparent !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* FIX: Make submenu text visible */
+  .site-nav .mega-menu .mega-link>span {
+    display: block !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+
+    color: #24464d !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    white-space: normal !important;
+  }
+
+  /* Submenu arrow */
+  .site-nav .mega-menu .mega-link>i {
+    color: #0b6e69 !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* Hover / Active color */
+  .site-nav .mega-menu .mega-link:hover,
+  .site-nav .mega-menu .mega-link.active {
+    background: #eaf6f2 !important;
+  }
+
+  .site-nav .mega-menu .mega-link:hover>span,
+  .site-nav .mega-menu .mega-link.active>span {
+    color: #0b6e69 !important;
+  }
+
+  /* Disable desktop animated underline */
+  .site-nav .navbar-nav .nav-link::before {
+    content: none !important;
+    display: none !important;
+  }
+
+  /* Keep border below the menu text */
+  .site-nav .navbar-nav>.nav-item>.nav-link {
+    position: relative;
+    padding: 14px 8px !important;
+    border-bottom: 1px solid #eef2f1 !important;
+    text-decoration: none !important;
+  }
+
+  /* Active and opened dropdown border */
+  .site-nav .navbar-nav>.nav-item.active-parent>.nav-link,
+  .site-nav .navbar-nav>.nav-item>.nav-link.active,
+  .site-nav .mega-dropdown.show>.nav-link,
+  .site-nav .mega-dropdown.mobile-open>.nav-link {
+    border-bottom-color: #0b6e69 !important;
   }
 }
 
@@ -3357,3 +3475,9 @@ h2 {
     grid-template-columns: 1fr
   }
 }
+
+/* ====================================
+   AHDF MOBILE DROPDOWN FIX
+==================================== */
+
+@media (max-width: 991.98px) {}
