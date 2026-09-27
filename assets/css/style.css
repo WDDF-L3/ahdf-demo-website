@@ -38,7 +38,7 @@ img {
 }
 
 .container {
-  max-width: 1180px
+  max-width: 95%;
 }
 
 .section {
@@ -520,7 +520,6 @@ h2 {
 }
 
 .pillar-card,
-.content-card,
 .person-card,
 .report-card {
   border: 1px solid var(--line);
@@ -528,6 +527,15 @@ h2 {
   padding: 28px;
   background: #fff;
   height: 100%;
+  transition: .2s
+}
+
+.content-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 28px;
+  background: #fff;
+  height: 60%;
   transition: .2s
 }
 
@@ -2249,8 +2257,8 @@ h2 {
 .mission-vision-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 920px;
-  margin: 0 auto
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .mission-vision-card {
@@ -2327,7 +2335,7 @@ h2 {
 .member-benefits li i {
   color: #079b91;
   font-weight: 900;
-  margin-right: 7px
+  margin-right: 7px;
 }
 
 .member-join-small {
@@ -2337,14 +2345,14 @@ h2 {
   text-transform: uppercase;
   font-size: .67rem;
   font-weight: 900;
-  padding: 7px 15px
+  padding: 7px 15px;
 }
 
 .member-banner-title {
   position: relative;
   z-index: 3;
   text-align: center;
-  line-height: .92
+  line-height: .92;
 }
 
 .member-banner-title span,
@@ -2352,15 +2360,15 @@ h2 {
   display: block;
   font-size: clamp(2.1rem, 4vw, 4rem);
   font-weight: 900;
-  letter-spacing: -.05em
+  letter-spacing: -.05em;
 }
 
 .member-banner-title span {
-  color: #263a43
+  color: #263a43;
 }
 
 .member-banner-title strong {
-  color: #27b6ad
+  color: #27b6ad;
 }
 
 .member-apply-btn {
@@ -2374,37 +2382,37 @@ h2 {
   font-weight: 900;
   text-transform: uppercase;
   font-size: .8rem;
-  box-shadow: 0 8px 18px rgba(237, 52, 75, .25)
+  box-shadow: 0 8px 18px rgba(237, 52, 75, .25);
 }
 
 .member-apply-btn:hover {
   color: #fff;
-  background: #c92239
+  background: #c92239;
 }
 
 .member-shape {
   position: absolute;
   border-radius: 50%;
-  background: rgba(31, 181, 170, .12)
+  background: rgba(31, 181, 170, .12);
 }
 
 .shape-a {
   width: 220px;
   height: 220px;
   right: 7%;
-  top: -65px
+  top: -65px;
 }
 
 .shape-b {
   width: 45px;
   height: 45px;
   left: 54%;
-  bottom: 22px
+  bottom: 22px;
 }
 
 /* Impact */
 .impact-section {
-  padding-top: 8px
+  padding-top: 8px;
 }
 
 .impact-board {
@@ -2413,49 +2421,39 @@ h2 {
   display: grid;
   grid-template-columns: 58% 42%;
   overflow: hidden;
-  position: relative
+  position: relative;
 }
 
-.impact-board:before {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 470px;
-  background: #fff;
-  left: 47%;
-  top: -45px;
-  border-radius: 50%
-}
 
 .impact-copy {
   padding: 48px 52px;
   color: #fff;
   position: relative;
-  z-index: 2
+  z-index: 2;
 }
 
 .impact-copy h2 {
   font-size: clamp(2.2rem, 4vw, 4rem);
   margin: 3px 0 28px;
-  color: #fff
+  color: #fff;
 }
 
 .impact-copy h2 span {
-  color: #e9ff58
+  color: #e9ff58;
 }
 
 .impact-metrics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px 32px;
-  max-width: 610px
+  max-width: 610px;
 }
 
 .impact-metrics strong {
   display: block;
   font-size: 1.7rem;
   line-height: 1;
-  color: #fff
+  color: #fff;
 }
 
 .impact-metrics small {
@@ -2807,19 +2805,19 @@ h2 {
   }
 
   .member-benefits {
-    grid-row: 1 / span 2
+    grid-row: 1 / span 2;
   }
 
   .member-apply-btn {
-    justify-self: start
+    justify-self: start;
   }
 
   .impact-board {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 
   .impact-board:before {
-    display: none
+    display: none;
   }
 
   .impact-visual {
@@ -2889,7 +2887,7 @@ h2 {
   }
 
   .mission-vision-grid {
-    grid-template-columns: 1fr
+    grid-template-columns: 1fr;
   }
 
   .mission-vision-card:first-child {
@@ -3074,7 +3072,7 @@ h2 {
 
 /* ===== FIXED HERO CONTENT / IMAGE-ONLY SLIDER ===== */
 .home-hero-fixed {
-  padding: 0 70px;
+  padding: 24px 0 70px;
   background:
     radial-gradient(circle at 76% 15%, rgba(17, 167, 157, .10), transparent 25%),
     linear-gradient(180deg, #ffffff 0%, #f7fbfa 100%);
