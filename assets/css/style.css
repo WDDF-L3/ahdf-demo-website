@@ -535,7 +535,7 @@ h2 {
   border-radius: var(--radius);
   padding: 28px;
   background: #fff;
-  height: 60%;
+  height: 100%;
   transition: .2s
 }
 
