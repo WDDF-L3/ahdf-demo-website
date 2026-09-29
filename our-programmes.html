@@ -1,125 +1,611 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Our Programmes - Asia Human Development Foundation" name="description"/>
-<title>Our Programmes | AHDF</title>
-<link href="https://cdn.jsdelivr.net" rel="preconnect"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
-<link href="assets/css/style.css" rel="stylesheet"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Our Programmes - Asia Human Development Foundation">
+  <title>Our Programmes | AHDF</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Our Programmes page only — preserves the existing AHDF site design. */
+    .programmes-page .programme-strategy-grid { align-items: stretch; }
+    .programmes-page .programme-pillar {
+      display: flex; flex-direction: column; justify-content: flex-start;
+      gap: 12px; padding: 25px; min-width: 0;
+    }
+    .programmes-page .programme-pillar-number {
+      display: inline-grid; place-items: center; width: 40px; height: 40px;
+      border-radius: 12px; font-size: .85rem; font-weight: 800;
+      color: var(--brand, #0b6e69); background: #eaf6f2;
+    }
+    .programmes-page .programme-pillar h3 {
+      font-size: 1.03rem; line-height: 1.5; margin: 0; overflow-wrap: anywhere;
+    }
+    .programmes-page .programme-detail,
+    .programmes-page .programme-platform { min-width: 0; }
+    .programmes-page .programme-detail-header {
+      display: flex; gap: 18px; align-items: flex-start;
+      border-bottom: 1px solid #e2eeeb; padding-bottom: 20px; margin-bottom: 20px;
+    }
+    .programmes-page .programme-detail-header .icon-box { flex: 0 0 auto; }
+    .programmes-page .programme-detail-heading { min-width: 0; }
+    .programmes-page .programme-detail-number {
+      display: block; color: var(--brand, #0b6e69); font-size: .72rem;
+      font-weight: 800; letter-spacing: .095em; text-transform: uppercase; margin-bottom: 6px;
+    }
+    .programmes-page .programme-detail h3,
+    .programmes-page .programme-platform h3 {
+      margin: 0 0 10px; line-height: 1.28; font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+      overflow-wrap: anywhere;
+    }
+    .programmes-page .programme-detail-heading p,
+    .programmes-page .programme-platform p { line-height: 1.75; }
+    .programmes-page .programme-activities {
+      columns: 2; column-gap: 42px; padding: 0; margin: 0;
+      list-style: none;
+    }
+    .programmes-page .programme-activities li {
+      break-inside: avoid; -webkit-column-break-inside: avoid;
+      position: relative; padding: 0 0 11px 24px;
+      color: #4b6567; line-height: 1.55; font-size: .94rem;
+      overflow-wrap: anywhere;
+    }
+    .programmes-page .programme-activities li::before {
+      content: ""; position: absolute; left: 1px; top: .54em;
+      width: 9px; height: 9px; border: 2px solid var(--brand, #0b6e69);
+      border-radius: 50%;
+    }
+    .programmes-page .programme-platform p { color: #4b6567; }
+    .programmes-page .programme-platform p:last-child { margin-bottom: 0; }
+    @media (max-width: 767.98px) {
+      .programmes-page .programme-activities { columns: 1; }
+      .programmes-page .programme-detail-header { gap: 13px; }
+      .programmes-page .programme-pillar { padding: 21px; }
+      .programmes-page .programme-activities li { font-size: .9rem; }
+    }
+    @media (max-width: 390px) {
+      .programmes-page .programme-detail-header { gap: 10px; }
+      .programmes-page .programme-detail-header .icon-box {
+        width: 42px; height: 42px; font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-<div class="topbar d-none d-lg-block">
-<div class="container d-flex justify-content-between align-items-center">
-<span>Independent • Non-profit • Non-political • Public-benefit foundation</span>
-<div class="d-flex gap-3"><span><i class="bi bi-geo-alt"></i> Dhaka, Bangladesh</span><a href="contact.html">Contact</a></div>
-</div>
-</div>
-<nav aria-label="Primary navigation" class="navbar navbar-expand-lg navbar-light site-nav">
-<div class="container-fluid nav-shell">
-<a aria-label="AHDF home" class="navbar-brand brand" href="index.html">
-<span class="brand-mark"><span class="brand-a">A</span><span class="brand-h">H</span></span>
-<span class="brand-copy"><strong>AHDF</strong><small>Asia Human Development Foundation</small></span>
-</a>
-<button aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler border-0 shadow-none" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
-<span class="menu-lines"><span></span><span></span><span></span></span>
-</button>
-<div class="collapse navbar-collapse" id="mainNav">
-<ul class="navbar-nav ms-auto align-items-lg-center">
-<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-<li class="nav-item dropdown mega-dropdown">
-<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Who We Are</a>
-<div class="dropdown-menu mega-menu shadow-lg border-0">
-<div class="mega-intro">
-<span class="eyebrow">Explore</span>
-<h3>Who We Are</h3>
-<p>Our identity, governance and leadership.</p>
-</div>
-<div class="mega-links"><a class="mega-link" href="about-foundation.html"><span>About Foundation</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="mission-vision.html"><span>Mission &amp; Vision</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="founder-directors.html"><span>Founder &amp; Directors</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="international-directors.html"><span>International Directors</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="president-message.html"><span>President Message</span><i class="bi bi-arrow-up-right"></i></a></div>
-</div>
-</li>
-<li class="nav-item dropdown mega-dropdown active-parent">
-<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">What We Do</a>
-<div class="dropdown-menu mega-menu shadow-lg border-0">
-<div class="mega-intro">
-<span class="eyebrow">Explore</span>
-<h3>What We Do</h3>
-<p>Skills, education, innovation and public-benefit initiatives.</p>
-</div>
-<div class="mega-links"><a class="mega-link active" href="our-programmes.html"><span>Our Programmes</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="our-activities.html"><span>Our Activities</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="our-projects.html"><span>Our Projects</span><i class="bi bi-arrow-up-right"></i></a></div>
-</div>
-</li>
-<li class="nav-item dropdown mega-dropdown">
-<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Where We Work</a>
-<div class="dropdown-menu mega-menu shadow-lg border-0">
-<div class="mega-intro">
-<span class="eyebrow">Explore</span>
-<h3>Where We Work</h3>
-<p>Bangladesh-led cooperation across Asia and beyond.</p>
-</div>
-<div class="mega-links"><a class="mega-link" href="international-cooperation.html"><span>International Cooperation</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="our-partners.html"><span>Our Partners</span><i class="bi bi-arrow-up-right"></i></a></div>
-</div>
-</li>
-<li class="nav-item dropdown mega-dropdown">
-<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Memberships</a>
-<div class="dropdown-menu mega-menu shadow-lg border-0">
-<div class="mega-intro">
-<span class="eyebrow">Explore</span>
-<h3>Memberships</h3>
-<p>A structured community of people and institutions.</p>
-</div>
-<div class="mega-links"><a class="mega-link" href="membership-list.html"><span>Membership List</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="code-of-conduct.html"><span>Code of Conduct</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="membership-process.html"><span>Membership Process</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="member-services.html"><span>Member Services</span><i class="bi bi-arrow-up-right"></i></a></div>
-</div>
-</li>
-<li class="nav-item dropdown mega-dropdown">
-<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">News &amp; Events</a>
-<div class="dropdown-menu mega-menu shadow-lg border-0">
-<div class="mega-intro">
-<span class="eyebrow">Explore</span>
-<h3>News &amp; Events</h3>
-<p>Updates, stories, publications and impact reporting.</p>
-</div>
-<div class="mega-links"><a class="mega-link" href="gallery.html"><span>Gallery</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="videos.html"><span>Videos</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="latest-news.html"><span>Latest News</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="blogs.html"><span>Blogs</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link" href="activity-reports.html"><span>Activity Reports</span><i class="bi bi-arrow-up-right"></i></a></div>
-</div>
-</li>
-<li class="nav-item d-lg-none"><a class="nav-link" href="contact.html">Contact Us</a></li>
-</ul>
-<a class="btn btn-brand ms-lg-3 d-none d-lg-inline-flex" href="contact.html">Contact Us <i class="bi bi-arrow-right"></i></a>
-</div>
-</div>
-</nav>
-</header>
-<section class="page-hero">
-<div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
-<div class="container position-relative">
-<nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item"><a href="our-programmes.html">What We Do</a></li><li aria-current="page" class="breadcrumb-item active">Our Programmes</li></ol></nav>
-<div class="row align-items-end g-4"><div class="col-lg-8"><span class="eyebrow">Asia Human Development Foundation</span><h1>Our Programmes</h1></div><div class="col-lg-4"><div class="hero-rule"></div></div></div>
-</div>
-</section><main><section class="section"><div class="container"><div class="section-title-row"><span class="eyebrow">Programme architecture</span><h2 class="mt-2">Programme directions across human development.</h2><p>The 2026–2035 Company Profile lists 14 programme portfolio areas. The six existing cards below group related directions; they are programme priorities rather than a list of completed projects.</p></div><div class="row g-4"><div class="col-md-6 col-lg-4"><div class="pillar-card"><div class="icon-box"><i class="bi bi-person-workspace"></i></div><h3>Human Capital &amp; Employability</h3><p class="text-muted-custom mb-0">Market-relevant upskilling, employability preparation, apprenticeships, work-based learning, assessment and career guidance.</p></div></div><div class="col-md-6 col-lg-4"><div class="pillar-card"><div class="icon-box"><i class="bi bi-mortarboard"></i></div><h3>Education, TVET &amp; Language</h3><p class="text-muted-custom mb-0">Quality education, competency-based TVET, foreign-language learning, cultural orientation, instructor development and lifelong learning.</p></div></div><div class="col-md-6 col-lg-4"><div class="pillar-card"><div class="icon-box"><i class="bi bi-leaf"></i></div><h3>Green Skills &amp; Climate Resilience</h3><p class="text-muted-custom mb-0">Clean energy competencies, resource efficiency, circular economy, climate-smart livelihoods, environmental conservation and disaster preparedness.</p></div></div><div class="col-md-6 col-lg-4"><div class="pillar-card"><div class="icon-box"><i class="bi bi-rocket-takeoff"></i></div><h3>Entrepreneurship &amp; Inclusive Growth</h3><p class="text-muted-custom mb-0">Start-up and SME development, social enterprise, financial literacy, women- and youth-led businesses and returnee livelihoods.</p></div></div><div class="col-md-6 col-lg-4"><div class="pillar-card"><div class="icon-box"><i class="bi bi-cpu"></i></div><h3>Technology, AI &amp; Innovation</h3><p class="text-muted-custom mb-0">Digital literacy, software, artificial intelligence, data analytics, cybersecurity, cloud, automation and responsible technology use.</p></div></div><div class="col-md-6 col-lg-4"><div class="pillar-card"><div class="icon-box"><i class="bi bi-journal-check"></i></div><h3>Research, Standards &amp; Policy</h3><p class="text-muted-custom mb-0">Skills-gap research, tracer studies, evidence-based policy analysis, competency standards, quality assurance and accreditation readiness.</p></div></div></div></div></section><section class="section section-soft"><div class="container"><div class="row g-4"><div class="col-lg-6"><div class="content-card"><h3>Cross-cutting theme: International cooperation</h3><p class="text-muted-custom">Prospective partnerships include Japan, the Republic of Korea and Italy, as well as other credible regional and global institutions, subject to law and approved agreements.</p></div></div><div class="col-lg-6"><div class="content-card"><h3>Cross-cutting theme: Ethics &amp; quality</h3><p class="text-muted-custom">All programme design is subject to safeguarding, inclusion, MEAL, quality assurance and any licensing or accreditation required for regulated activities.</p></div></div></div></div></section></main>
-<footer class="footer">
-<div class="container py-5">
-<div class="row g-4">
-<div class="col-lg-4">
-<a class="brand brand-footer" href="index.html">
-<span class="brand-mark"><span class="brand-a">A</span><span class="brand-h">H</span></span>
-<span class="brand-copy"><strong>AHDF</strong><small>Asia Human Development Foundation</small></span>
-</a>
-<p class="mt-3 footer-intro">Skills, Inclusion and Green Growth for Shared Prosperity — developing humanity beyond borders through education, skills, inclusion and responsible international cooperation.</p>
-<div class="socials"><a aria-label="Facebook" href="#"><i class="bi bi-facebook"></i></a><a aria-label="LinkedIn" href="#"><i class="bi bi-linkedin"></i></a><a aria-label="YouTube" href="#"><i class="bi bi-youtube"></i></a></div>
-</div>
-<div class="col-6 col-lg-2"><h6>Foundation</h6><a href="about-foundation.html">About</a><a href="mission-vision.html">Mission &amp; Vision</a><a href="founder-directors.html">Leadership</a><a href="president-message.html">President</a></div>
-<div class="col-6 col-lg-2"><h6>Work</h6><a href="our-programmes.html">Programmes</a><a href="our-projects.html">Projects</a><a href="international-cooperation.html">Cooperation</a><a href="our-partners.html">Partners</a></div>
-<div class="col-6 col-lg-2"><h6>Community</h6><a href="membership-process.html">Membership</a><a href="member-services.html">Member Services</a><a href="latest-news.html">News</a><a href="activity-reports.html">Reports</a></div>
-<div class="col-6 col-lg-2"><h6>Contact</h6><p class="small mb-2">49, Motijheel C/A, 4th Floor, Shapla Bhaban, Dhaka-1000, Bangladesh</p><a href="contact.html">Send an enquiry</a></div>
-</div>
-</div>
-<div class="footer-bottom"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>© 2026 AHDF. Website frontend draft.</span><span>Built for accessibility, responsiveness and future CMS integration.</span></div></div>
-</footer>
-<button aria-label="Back to top" class="back-top" id="backTop"><i class="bi bi-arrow-up"></i></button>
+    <header class="site-header">
+      <div class="topbar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+          <span>Independent • Non-profit • Non-political • Public-benefit foundation</span>
+          <div class="d-flex gap-3"><span><i class="bi bi-geo-alt"></i> Dhaka, Bangladesh</span><a href="contact.html">Contact</a></div>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light site-nav" aria-label="Primary navigation">
+        <div class="container-fluid nav-shell">
+          <a class="navbar-brand brand" href="index.html" aria-label="AHDF home">
+            <span class="brand-mark"><span class="brand-a">A</span><span class="brand-h">H</span></span>
+            <span class="brand-copy"><strong>AHDF</strong><small>Asia Human Development Foundation</small></span>
+          </a>
+          <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="menu-lines"><span></span><span></span><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+              
+        <li class="nav-item dropdown mega-dropdown ">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Who We Are</a>
+          <div class="dropdown-menu mega-menu shadow-lg border-0">
+            <div class="mega-intro">
+              <span class="eyebrow">Explore</span>
+              <h3>Who We Are</h3>
+              <p>Our identity, governance and leadership.</p>
+            </div>
+            <div class="mega-links"><a class="mega-link " href="about-foundation.html"><span>About Foundation</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="mission-vision.html"><span>Mission & Vision</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="founder-directors.html"><span>Founder & Directors</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="international-directors.html"><span>International Directors</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="president-message.html"><span>President Message</span><i class="bi bi-arrow-up-right"></i></a></div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown mega-dropdown active-parent">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">What We Do</a>
+          <div class="dropdown-menu mega-menu shadow-lg border-0">
+            <div class="mega-intro">
+              <span class="eyebrow">Explore</span>
+              <h3>What We Do</h3>
+              <p>Skills, education, innovation and public-benefit initiatives.</p>
+            </div>
+            <div class="mega-links"><a class="mega-link active" href="our-programmes.html"><span>Our Programmes</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="our-activities.html"><span>Our Activities</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="our-projects.html"><span>Our Projects</span><i class="bi bi-arrow-up-right"></i></a></div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown mega-dropdown ">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Where We Work</a>
+          <div class="dropdown-menu mega-menu shadow-lg border-0">
+            <div class="mega-intro">
+              <span class="eyebrow">Explore</span>
+              <h3>Where We Work</h3>
+              <p>Bangladesh-led cooperation across Asia and beyond.</p>
+            </div>
+            <div class="mega-links"><a class="mega-link " href="international-cooperation.html"><span>International Cooperation</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="our-partners.html"><span>Our Partners</span><i class="bi bi-arrow-up-right"></i></a></div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown mega-dropdown ">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Memberships</a>
+          <div class="dropdown-menu mega-menu shadow-lg border-0">
+            <div class="mega-intro">
+              <span class="eyebrow">Explore</span>
+              <h3>Memberships</h3>
+              <p>A structured community of people and institutions.</p>
+            </div>
+            <div class="mega-links"><a class="mega-link " href="membership-list.html"><span>Membership List</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="code-of-conduct.html"><span>Code of Conduct</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="membership-process.html"><span>Membership Process</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="member-services.html"><span>Member Services</span><i class="bi bi-arrow-up-right"></i></a></div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown mega-dropdown ">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">News & Events</a>
+          <div class="dropdown-menu mega-menu shadow-lg border-0">
+            <div class="mega-intro">
+              <span class="eyebrow">Explore</span>
+              <h3>News & Events</h3>
+              <p>Updates, stories, publications and impact reporting.</p>
+            </div>
+            <div class="mega-links"><a class="mega-link " href="gallery.html"><span>Gallery</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="videos.html"><span>Videos</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="latest-news.html"><span>Latest News</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="blogs.html"><span>Blogs</span><i class="bi bi-arrow-up-right"></i></a><a class="mega-link " href="activity-reports.html"><span>Activity Reports</span><i class="bi bi-arrow-up-right"></i></a></div>
+          </div>
+        </li>
+              <li class="nav-item d-lg-none"><a class="nav-link " href="contact.html">Contact Us</a></li>
+            </ul>
+            <a class="btn btn-brand ms-lg-3 d-none d-lg-inline-flex" href="contact.html">Contact Us <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="page-hero">
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      <div class="container position-relative">
+        <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">Home</a></li><li class="breadcrumb-item"><a href="our-programmes.html">What We Do</a></li><li class="breadcrumb-item active" aria-current="page">Our Programmes</li></ol></nav>
+        <div class="row align-items-end g-4"><div class="col-lg-8"><span class="eyebrow">Asia Human Development Foundation</span><h1>Our Programmes</h1></div><div class="col-lg-4"><div class="hero-rule"></div></div></div>
+      </div>
+    </section><main class="programmes-page">
+  <section class="section">
+    <div class="container">
+      <div class="section-title-row">
+        <span class="eyebrow">Programme architecture</span>
+        <h2 class="mt-2">Strategic Framework 2026–2035</h2>
+        <p>AHDF’s 2026–2035 direction is organized around an integrated set of strategic pillars that combine its constitutional mandate with its proposed programme and partnership priorities.</p>
+      </div>
+      <div class="row g-3 programme-strategy-grid">
+        <div class="col-md-6 col-lg-4">
+          <div class="pillar-card programme-pillar h-100">
+            <span class="programme-pillar-number">01</span>
+            <h3>Education, Human Capital Development and Workforce Competitiveness</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="pillar-card programme-pillar h-100">
+            <span class="programme-pillar-number">02</span>
+            <h3>Skills Development, TVET, Employment and Career Advancement</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="pillar-card programme-pillar h-100">
+            <span class="programme-pillar-number">03</span>
+            <h3>Ethical Labour Mobility and Migration Governance</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="pillar-card programme-pillar h-100">
+            <span class="programme-pillar-number">04</span>
+            <h3>Entrepreneurship, Innovation and Inclusive Economic Development</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="pillar-card programme-pillar h-100">
+            <span class="programme-pillar-number">05</span>
+            <h3>Green Skills, Climate Resilience and Environmental Sustainability</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="pillar-card programme-pillar h-100">
+            <span class="programme-pillar-number">06</span>
+            <h3>Digital Transformation, Technology and Future Skills</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="pillar-card programme-pillar h-100">
+            <span class="programme-pillar-number">07</span>
+            <h3>Healthcare, Community Wellbeing and Integrated Community Development</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="pillar-card programme-pillar h-100">
+            <span class="programme-pillar-number">08</span>
+            <h3>Women, Youth, Disability Inclusion and Social Empowerment</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="pillar-card programme-pillar h-100">
+            <span class="programme-pillar-number">09</span>
+            <h3>Research, Knowledge Management, Quality Assurance and Policy Advocacy</h3>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="pillar-card programme-pillar h-100">
+            <span class="programme-pillar-number">10</span>
+            <h3>International Cooperation, Knowledge Exchange and Development Partnerships</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="programme-areas">
+    <div class="container">
+      <div class="section-title-row">
+        <span class="eyebrow">Our areas of work</span>
+        <h2 class="mt-2">Detailed Programme and Areas of Work</h2>
+        <p>AHDF may undertake programmes, projects, services and institutional partnerships in the following areas, subject to applicable law, approvals and operational capacity.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12">
+          <article class="content-card programme-detail" id="programme-01">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-mortarboard" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">Programme area 01</span>
+                <h3>Education and Capacity Development</h3>
+                <p class="text-muted-custom mb-0">AHDF may support equitable access to education and lifelong learning, particularly for disadvantaged and underserved learners.</p>
+              </div>
+            </div>
+            <ul class="programme-activities">
+                <li>Scholarships and educational support</li>
+                <li>School improvement initiatives</li>
+                <li>Digital learning and STEM awareness</li>
+                <li>Teacher and instructor capacity development</li>
+                <li>Modern teaching and learning methodologies</li>
+                <li>Learning materials and educational resources</li>
+                <li>Community learning initiatives</li>
+                <li>Digital literacy and lifelong learning</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12">
+          <article class="content-card programme-detail" id="programme-02">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-person-workspace" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">Programme area 02</span>
+                <h3>Skills Development, TVET and Employment</h3>
+                <p class="text-muted-custom mb-0">AHDF will promote market-relevant technical, vocational and employability skills that respond to evolving workforce demand.</p>
+              </div>
+            </div>
+            <ul class="programme-activities">
+                <li>TVET and industry-oriented skills development</li>
+                <li>Competency-Based Education and Training (CBET)</li>
+                <li>Competency-based assessment and certification</li>
+                <li>Apprenticeship and Dual Training System (DTS)</li>
+                <li>Work-Based Learning and internships</li>
+                <li>Career counselling and employment preparation</li>
+                <li>Occupational safety and health awareness</li>
+                <li>Trainer and instructor development</li>
+                <li>Professional certification pathways</li>
+                <li>Reskilling and upskilling</li>
+                <li>Skills research and labour market assessments</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12">
+          <article class="content-card programme-detail" id="programme-03">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-translate" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">Programme area 03</span>
+                <h3>Language, Cultural and Workforce Readiness</h3>
+                <p class="text-muted-custom mb-0">AHDF will integrate language proficiency, cultural understanding, behaviour, ethics and workplace readiness into human capital development.</p>
+              </div>
+            </div>
+            <ul class="programme-activities">
+                <li>Foreign language education and proficiency development</li>
+                <li>Language assessment and examination preparation</li>
+                <li>Industry-specific language and communication</li>
+                <li>Cross-cultural competency and intercultural communication</li>
+                <li>Workplace behaviour and professional conduct</li>
+                <li>Professional ethics</li>
+                <li>International work culture orientation</li>
+                <li>Destination-specific workforce preparation</li>
+                <li>Customer service and professional communication</li>
+                <li>Daily-life and social adaptation orientation</li>
+                <li>International exchange and cultural cooperation</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12">
+          <article class="content-card programme-detail" id="programme-04">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-globe-asia-australia" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">Programme area 04</span>
+                <h3>Ethical Labour Mobility and Migration Governance</h3>
+                <p class="text-muted-custom mb-0">AHDF will support informed, rights-aware and ethically managed labour mobility pathways while respecting all applicable recruitment and migration regulations.</p>
+              </div>
+            </div>
+            <ul class="programme-activities">
+                <li>Ethical recruitment principles and fair employment practices</li>
+                <li>Ethical, safe, orderly and regular migration awareness</li>
+                <li>Labour mobility information and guidance</li>
+                <li>Skills recognition and certification</li>
+                <li>Recognition of Prior Learning (RPL)</li>
+                <li>Pre-departure orientation and preparedness</li>
+                <li>Language and cultural preparation</li>
+                <li>Worker rights awareness and protection</li>
+                <li>Migrant welfare and referral support</li>
+                <li>Returnee migrant reintegration</li>
+                <li>Returnee entrepreneurship and livelihood support</li>
+                <li>Bilateral and multilateral labour cooperation</li>
+                <li>Japan-related pathways, including language, care-worker readiness and SSW readiness through authorized partners</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12">
+          <article class="content-card programme-detail" id="programme-05">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">Programme area 05</span>
+                <h3>Entrepreneurship, Start-up and SME Development</h3>
+                <p class="text-muted-custom mb-0">AHDF will promote entrepreneurship as a pathway to employment, income generation, innovation and local economic resilience.</p>
+              </div>
+            </div>
+            <ul class="programme-activities">
+                <li>Entrepreneurship education</li>
+                <li>Business development training</li>
+                <li>Start-up incubation</li>
+                <li>SME development</li>
+                <li>Social enterprise development</li>
+                <li>Business mentoring</li>
+                <li>Financial literacy</li>
+                <li>Market-oriented enterprise skills</li>
+                <li>Technology-enabled enterprise</li>
+                <li>Green enterprise development</li>
+                <li>Women- and youth-led enterprise support</li>
+                <li>Returnee entrepreneur support</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12">
+          <article class="content-card programme-detail" id="programme-06">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-cpu" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">Programme area 06</span>
+                <h3>Digital Transformation, Technology and Innovation</h3>
+                <p class="text-muted-custom mb-0">AHDF will support digital inclusion and future workforce development through technology-oriented skills, services and innovation initiatives.</p>
+              </div>
+            </div>
+            <ul class="programme-activities">
+                <li>ICT and digital literacy</li>
+                <li>Software development</li>
+                <li>Artificial Intelligence (AI)</li>
+                <li>Data analytics</li>
+                <li>Cybersecurity</li>
+                <li>Cloud computing</li>
+                <li>Digital marketing</li>
+                <li>E-commerce</li>
+                <li>FinTech and digital financial services</li>
+                <li>Robotics and automation</li>
+                <li>Internet of Things (IoT)</li>
+                <li>Emerging technologies</li>
+                <li>Online freelancing readiness</li>
+                <li>Technology entrepreneurship</li>
+                <li>Innovation labs and incubation</li>
+                <li>Smart workforce development</li>
+                <li>Responsible technology use</li>
+                <li>Beneficiary databases, dashboards and digital reporting</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12">
+          <article class="content-card programme-detail" id="programme-07">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-leaf" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">Programme area 07</span>
+                <h3>Green Skills, Climate Resilience and Environmental Sustainability</h3>
+                <p class="text-muted-custom mb-0">AHDF will promote green skills, climate resilience and environmentally responsible livelihoods and technologies.</p>
+              </div>
+            </div>
+            <ul class="programme-activities">
+                <li>Green skills development</li>
+                <li>Green jobs promotion</li>
+                <li>Clean energy competencies</li>
+                <li>Renewable energy education and technology</li>
+                <li>Resource efficiency</li>
+                <li>Circular economy</li>
+                <li>Waste management</li>
+                <li>Sustainable agriculture</li>
+                <li>Climate-smart livelihoods</li>
+                <li>Environmental conservation</li>
+                <li>Water conservation</li>
+                <li>Tree plantation</li>
+                <li>Disaster preparedness</li>
+                <li>Climate adaptation and mitigation awareness</li>
+                <li>Carbon awareness</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12">
+          <article class="content-card programme-detail" id="programme-08">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-heart-pulse" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">Programme area 08</span>
+                <h3>Healthcare and Community Wellbeing</h3>
+                <p class="text-muted-custom mb-0">AHDF may implement community health-support initiatives with qualified professionals and partner institutions.</p>
+              </div>
+            </div>
+            <ul class="programme-activities">
+                <li>Medical camps</li>
+                <li>Maternal and child health awareness</li>
+                <li>Nutrition support and awareness</li>
+                <li>Preventive care</li>
+                <li>Telemedicine connections</li>
+                <li>Mental health awareness</li>
+                <li>Health education</li>
+                <li>Referral assistance</li>
+                <li>Community wellbeing programmes</li>
+                <li>Health-related capacity development</li>
+                <li>Priority support for underserved communities, elderly people, women, children, persons with disabilities and disaster-affected populations</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12">
+          <article class="content-card programme-detail" id="programme-09">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-people" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">Programme area 09</span>
+                <h3>Women, Youth and Disability-Inclusive Development</h3>
+                <p class="text-muted-custom mb-0">AHDF will mainstream gender, youth participation and disability inclusion across relevant programmes.</p>
+              </div>
+            </div>
+            <ul class="programme-activities">
+                <li>Women’s leadership and economic empowerment</li>
+                <li>Youth leadership and mentorship</li>
+                <li>Financial literacy and rights awareness</li>
+                <li>Skills and employment support</li>
+                <li>Youth volunteering and community ambassador programmes</li>
+                <li>Accessible skills development</li>
+                <li>Inclusive training centres</li>
+                <li>Accessible learning materials and technologies</li>
+                <li>Disability-inclusive employment</li>
+                <li>Workplace accessibility advocacy</li>
+                <li>Livelihood and entrepreneurship support</li>
+                <li>Safeguarding and anti-discrimination measures</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12">
+          <article class="content-card programme-detail" id="programme-10">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-houses" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">Programme area 10</span>
+                <h3>Community Development and Integrated Village Model</h3>
+                <p class="text-muted-custom mb-0">AHDF will support community-based development and may pilot an integrated village model combining social, economic and environmental interventions.</p>
+              </div>
+            </div>
+            <ul class="programme-activities">
+                <li>Education</li>
+                <li>Health and community wellbeing</li>
+                <li>Skills and employment</li>
+                <li>Livelihoods</li>
+                <li>Entrepreneurship and SME support</li>
+                <li>Water and sanitation</li>
+                <li>Climate resilience</li>
+                <li>Environmental awareness</li>
+                <li>Community participation</li>
+                <li>Social cohesion</li>
+                <li>Poverty reduction</li>
+                <li>Community capacity building</li>
+                <li>Pilot, evaluate, learn and scale where appropriate</li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12">
+          <article class="content-card programme-detail" id="programme-11">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-journal-check" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">Programme area 11</span>
+                <h3>Research, Knowledge Management, Standards and Certification</h3>
+                <p class="text-muted-custom mb-0">AHDF will promote evidence generation, quality assurance and institutional learning.</p>
+              </div>
+            </div>
+            <ul class="programme-activities">
+                <li>Labour market assessments</li>
+                <li>Skills gap analysis</li>
+                <li>Tracer studies</li>
+                <li>Socio-economic research</li>
+                <li>Surveys and data collection</li>
+                <li>Pilot programmes and evaluations</li>
+                <li>Evidence-based policy analysis</li>
+                <li>Knowledge management</li>
+                <li>Research publications and policy briefs</li>
+                <li>Curricula and manuals</li>
+                <li>Competency frameworks</li>
+                <li>Occupational standards</li>
+                <li>Trainer certification</li>
+                <li>Quality assurance and accreditation readiness</li>
+                <li>Internationally comparable learning outcomes</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="international-platforms">
+    <div class="container">
+      <div class="section-title-row">
+        <span class="eyebrow">Knowledge exchange and partnerships</span>
+        <h2 class="mt-2">International Human Development Platforms</h2>
+        <p>The profile identifies Bangladesh–Japan and Bangladesh–Korea cooperation as part of AHDF’s international programme direction.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-12">
+          <article class="content-card programme-platform">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-globe2" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">International cooperation</span>
+                <h3>International Cooperation and Bangladesh–Japan Human Development Platform</h3>
+              </div>
+            </div>
+            <p>AHDF seeks to build a long-term international cooperation platform that connects Bangladesh with external expertise, knowledge, technology, training, institutional learning and development partnerships. Bangladesh–Japan cooperation is an important institutional focus within this broader international framework.</p>
+            <p>Potential areas of cooperation include skills and TVET, education, language, workplace culture, cross-cultural competency, health, technology, climate action, knowledge exchange, youth and cultural exchange, research and institutional capacity building.</p>
+            <p>Potential international partners may include embassies, development agencies, United Nations entities, universities, hospitals, philanthropic foundations, CSR departments, technology organizations, professional associations and other credible institutions.</p>
+            <p class="mb-0">Possible cooperation modalities include technical assistance, grants, training, equipment support, research, exchange programmes, volunteer initiatives, joint pilots, memoranda of understanding, project agreements and strategic cooperation frameworks. All such arrangements should be supported by clear roles, approved workplans, budgets, reporting and compliance requirements.</p>
+          </article>
+        </div>
+        <div class="col-12">
+          <article class="content-card programme-platform">
+            <div class="programme-detail-header">
+              <div class="icon-box"><i class="bi bi-globe2" aria-hidden="true"></i></div>
+              <div class="programme-detail-heading">
+                <span class="programme-detail-number">International cooperation</span>
+                <h3>International Cooperation and Bangladesh–Korea Human Development Platform</h3>
+              </div>
+            </div>
+            <p>AHDF is committed to establishing a sustainable, long-term platform for international collaboration—one that links Bangladesh with global expertise, knowledge resources, technological innovation, capacity-building training, institutional learning opportunities, and broader development partnerships. Within this wider international strategy, strengthening institutional ties between Bangladesh and Korea stands out as a key priority area.</p>
+            <p class="mb-0">The scope of potential collaboration spans multiple sectors, including technical and vocational skills development (TVET), education, language training, workplace culture orientation, cross-cultural competency building, healthcare, technology transfer, climate action initiatives, knowledge sharing, youth and cultural exchange programs, as well as research and institutional capacity strengthening.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+    <footer class="footer">
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a class="brand brand-footer" href="index.html">
+              <span class="brand-mark"><span class="brand-a">A</span><span class="brand-h">H</span></span>
+              <span class="brand-copy"><strong>AHDF</strong><small>Asia Human Development Foundation</small></span>
+            </a>
+            <p class="mt-3 footer-intro">Advancing human capital, education, skills, responsible technology, international cooperation and inclusive development for public benefit.</p>
+            <div class="socials"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></div>
+          </div>
+          <div class="col-6 col-lg-2"><h6>Foundation</h6><a href="about-foundation.html">About</a><a href="mission-vision.html">Mission & Vision</a><a href="founder-directors.html">Leadership</a><a href="president-message.html">President</a></div>
+          <div class="col-6 col-lg-2"><h6>Work</h6><a href="our-programmes.html">Programmes</a><a href="our-projects.html">Projects</a><a href="international-cooperation.html">Cooperation</a><a href="our-partners.html">Partners</a></div>
+          <div class="col-6 col-lg-2"><h6>Community</h6><a href="membership-process.html">Membership</a><a href="member-services.html">Member Services</a><a href="latest-news.html">News</a><a href="activity-reports.html">Reports</a></div>
+          <div class="col-6 col-lg-2"><h6>Contact</h6><p class="small mb-2">49 Motijheel Commercial Area, 4th Floor, Dhaka-1000, Bangladesh</p><a href="contact.html">Send an enquiry</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><span>© 2026 AHDF. Website frontend draft.</span><span>Built for accessibility, responsiveness and future CMS integration.</span></div></div>
+    </footer>
+    <button class="back-top" id="backTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+    
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body></html>
