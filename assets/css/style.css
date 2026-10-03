@@ -526,8 +526,8 @@ h2 {
   border-radius: var(--radius);
   padding: 28px;
   background: #fff;
-  height: 100%;
-  transition: .2s
+  /* height: 100%; */
+  transition: .2s;
 }
 
 .content-card {
@@ -1313,7 +1313,7 @@ h2 {
   .pillar-card,
   .content-card,
   .report-card {
-    padding: 22px
+    padding: 22px;
   }
 
   .person-top {
